@@ -38,19 +38,25 @@ document.querySelector("#skip").addEventListener("click", function() {
 	console.log("Current playback position of video is " + video.currentTime);
 })
 
-
-//fix this it's not working
 document.querySelector("#mute").addEventListener("click", function() { 
-	video.muted = true;
-	console.log("askjdhfalksjdhfals");
-	if (video.muted = false) { 
+	if (video.muted == false) { 
 		video.muted = true;
-		document.getElementById("mute").innerHtml = "unmute";
+		document.getElementById("mute").innerHTML = "Unmute";
 	}
-	if (video.muted = true) { 
+	else { 
 		video.muted = false;
-		document.getElementById("mute").innerHtml = "mute";
+		document.getElementById("mute").innerHTML = "Mute";
 	}
+})
+
+document.querySelector("#slider").addEventListener("click", function() { 
 
 })
 
+document.querySelector("#vintage").addEventListener("click", function() { 
+	video.style = oldSchool;
+})
+
+document.querySelector("#orig").addEventListener("click", function() { 
+
+})
