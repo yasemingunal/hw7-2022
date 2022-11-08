@@ -50,13 +50,14 @@ document.querySelector("#mute").addEventListener("click", function() {
 })
 
 document.querySelector("#slider").addEventListener("click", function() { 
-
+	video.volume = this.value / 100;
+	document.getElementById("volume").innerHTML = video.volume;
 })
 
 document.querySelector("#vintage").addEventListener("click", function() { 
-	video.style = oldSchool;
+	video.classList.add(".oldSchool");
 })
 
 document.querySelector("#orig").addEventListener("click", function() { 
-
+	video.classList.remove(".oldSchool");
 })
